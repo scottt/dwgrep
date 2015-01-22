@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2014 Red Hat, Inc.
+   Copyright (C) 2014, 2015 Red Hat, Inc.
    This file is part of dwgrep.
 
    This file is free software; you can redistribute it and/or modify
@@ -79,6 +79,9 @@ public:
   std::string &get_fn ()
   { return m_fn; }
 
+  std::string const &get_fn () const
+  { return m_fn; }
+
   std::shared_ptr <dwfl_context> get_dwctx ()
   { return m_dwctx; }
 
@@ -116,10 +119,10 @@ public:
   std::shared_ptr <dwfl_context> get_dwctx ()
   { return m_dwctx; }
 
-  Dwarf_CU &get_cu ()
+  Dwarf_CU &get_cu () const
   { return m_cu; }
 
-  Dwarf_Off get_offset ()
+  Dwarf_Off get_offset () const
   { return m_offset; }
 
   void show (std::ostream &o, brevity brv) const override;
@@ -168,6 +171,9 @@ public:
   }
 
   Dwarf_Die &get_die ()
+  { return m_die; }
+
+  Dwarf_Die const &get_die () const
   { return m_die; }
 
   std::shared_ptr <dwfl_context> get_dwctx ()
