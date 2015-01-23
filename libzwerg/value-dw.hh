@@ -82,7 +82,7 @@ public:
   std::string const &get_fn () const
   { return m_fn; }
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   void show (std::ostream &o, brevity brv) const override;
@@ -116,7 +116,7 @@ public:
 
   value_cu (value_cu const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_CU &get_cu () const
@@ -176,7 +176,7 @@ public:
   Dwarf_Die const &get_die () const
   { return m_die; }
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   void show (std::ostream &o, brevity brv) const override;
@@ -213,7 +213,7 @@ public:
 
   value_attr (value_attr const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_Die &get_die ()
@@ -249,7 +249,7 @@ public:
 
   value_abbrev_unit (value_abbrev_unit const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_CU &get_cu ()
@@ -282,7 +282,7 @@ public:
 
   value_abbrev (value_abbrev const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_Abbrev &get_abbrev ()
@@ -352,7 +352,7 @@ public:
 
   value_loclist_elem (value_loclist_elem const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_Attribute &get_attr ()
@@ -428,7 +428,7 @@ public:
 
   value_loclist_op (value_loclist_op const &that) = default;
 
-  std::shared_ptr <dwfl_context> get_dwctx ()
+  std::shared_ptr <dwfl_context> get_dwctx () const
   { return m_dwctx; }
 
   Dwarf_Attribute &get_attr ()
