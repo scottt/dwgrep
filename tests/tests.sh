@@ -812,4 +812,6 @@ expect_out '0..0xffffffffffffffff:0 call_frame_cfa' \
 	   a1.out -e 'entry (offset == 0x32) @AT_frame_base'
 
 echo "$total tests total, $failures failures."
+
+trap - ERR
 [ $failures -eq 0 ]
